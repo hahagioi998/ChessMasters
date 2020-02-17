@@ -1,11 +1,14 @@
 package com.chessmaster.pieces;
-public class Bishop extends Piece {
+
+public class Chudaka 
+			extends Piece 
+			implements Blastable {
 	
-	public Bishop(String color, int row, int col) {
+	public Chudaka(String color, int row, int col) {
 		
-		super(color,"B",  row, col);
-		this.power  = 5;
-		this.id 	= 2;
+		super(color, "Cd", row, col);
+		this.power 	= 15;
+		this.id 	= 7;
 	}
 
 	@Override
@@ -21,8 +24,15 @@ public class Bishop extends Piece {
 	}
 
 	@Override
+	public void blast() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
 	public boolean isMoveActionValid(int row, int col) {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
 }

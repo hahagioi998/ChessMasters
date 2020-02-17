@@ -1,35 +1,29 @@
 package com.chessmaster.pieces;
+public class Queen extends Piece {
+	
+	
+	public Queen(String color, int row, int col) {
+		
+		super(color, "Q", row, col);
+		this.power  = 10;
+		this.id 	= 6;
+	}
 
-public class Queen {
+	@Override
+	public void move(int row, int col) {
+		// TODO Auto-generated method stub
+		
+	}
 
-  public String color;
-  public int power;
-  public int id;
-  public int row;
-  public int column;
+	@Override
+	public void attack(int row, int col) {
+		// TODO Auto-generated method stub
+		
+	}
 
-  public Queen(String color, int row, int column) {
-
-    this.color = color;
-    this.power = 10;
-    this.id = 6;
-    this.row = row;
-    this.column = column;
-  }
-
-  public boolean isMoveValid(int moveRow, int moveColumn) {
-    Rook rook = new Rook(color, row, column);
-    Bishop bishop = new Bishop(color, row, column);
-    if (rook.isMoveValid(moveRow, moveColumn) ^ bishop.isMoveValid(moveRow, moveColumn)) {
-      return true;
-    }
-    return false;
-  }
-
-  public void move(int row, int column) {
-    if (isMoveValid(row, column)) {
-      this.row = row;
-      this.column = column;
-    }
-  }
+	@Override
+	public boolean isMoveActionValid(int row, int col) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

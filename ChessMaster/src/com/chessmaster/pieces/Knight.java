@@ -1,34 +1,28 @@
 package com.chessmaster.pieces;
+public class Knight extends Piece {
+	
+	public Knight(String color, int row, int col) {
+		
+		super(color, "Kn", row, col);
+		this.power  = 5;
+		this.id 	= 3;
+	}
 
-public class Knight {
+	@Override
+	public void move(int row, int col) {
+		// TODO Auto-generated method stub
+		
+	}
 
-  public String color;
-  public int power;
-  public int id;
-  public int row;
-  public int column;
+	@Override
+	public void attack(int row, int col) {
+		// TODO Auto-generated method stub
+		
+	}
 
-  public Knight(String color, int row, int column) {
-    this.color = color;
-    this.power = 5;
-    this.id = 3;
-    this.row = row;
-    this.column = column;
-  }
-
-  public boolean isMoveValid(int moveRow, int moveColumn) {
-    boolean isMovedByRows = Math.abs(moveRow - row) == 2 && Math.abs(moveColumn - column) == 1;
-    boolean isMovedByColumns = Math.abs(moveRow - row) == 1 && Math.abs(moveColumn - column) == 2;
-    if (isMovedByRows ^ isMovedByColumns) {
-      return true;
-    }
-    return false;
-  }
-
-  public void move(int row, int column) {
-    if (isMoveValid(row, column)) {
-      this.row = row;
-      this.column = column;
-    }
-  }
+	@Override
+	public boolean isMoveActionValid(int row, int col) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

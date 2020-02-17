@@ -1,37 +1,29 @@
 package com.chessmaster.pieces;
 
-public class Rook {
+public class Rook extends Piece {
+	
+	public Rook(String color, int row, int col) {
+		
+		super(color, "R", row, col);
+		this.power  = 5;
+		this.id 	= 4;
+	}
 
-  public String color;
-  public int power;
-  public int id;
-  public int row;
-  public int column;
+	@Override
+	public void move(int row, int col) {
+		// TODO Auto-generated method stub
+		
+	}
 
-  public Rook() {}
+	@Override
+	public void attack(int row, int col) {
+		// TODO Auto-generated method stub
+		
+	}
 
-  public Rook(String color, int row, int column) {
-
-    this.color = color;
-    this.power = 5;
-    this.id = 4;
-    this.row = row;
-    this.column = column;
-  }
-
-  public boolean isMoveValid(int moveRow, int moveColumn) {
-    int changeInRow = Math.abs(moveRow - this.row);
-    int changeInColumn = Math.abs(moveColumn - this.column);
-    if (changeInRow != 0 ^ changeInColumn != 0) {
-      return true;
-    }
-    return false;
-  }
-
-  public void move(int row, int column) {
-    if (isMoveValid(row, column)) {
-      this.row = row;
-      this.column = column;
-    }
-  }
+	@Override
+	public boolean isMoveActionValid(int row, int col) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
